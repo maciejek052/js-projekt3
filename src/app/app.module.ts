@@ -18,6 +18,10 @@ import { WykonawcaPrzegladComponent } from './wykonawca/wykonawca-przeglad/wykon
 import { GatunekDaneComponent } from './gatunek/gatunek-dane/gatunek-dane.component';
 import { GatunekPrzegladComponent } from './gatunek/gatunek-przeglad/gatunek-przeglad.component';
 import { GatunekPojedynczyComponent } from './gatunek/gatunek-pojedynczy/gatunek-pojedynczy.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +45,10 @@ import { GatunekPojedynczyComponent } from './gatunek/gatunek-pojedynczy/gatunek
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatButtonModule
-  
+    MatButtonModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
