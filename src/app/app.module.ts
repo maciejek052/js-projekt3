@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,10 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatButtonModule
-  
+    MatButtonModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
