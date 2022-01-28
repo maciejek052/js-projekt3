@@ -4,18 +4,26 @@
       "id": 1,
       "name": "Pink Floyd",
       "country": "UK",
-      "photo": "https://i.imgur.com/3ZbNxSY.jpeg"
+      "photo": "https://i.imgur.com/3ZbNxSY.jpeg",
+      "description": "Opis Pink Floyd"
     },
     {
       "id": 2,
       "name": "Joji",
       "country": "Japonia",
-      "photo": "https://i.imgur.com/DNTnLN8.jpg"
+      "photo": "https://i.imgur.com/DNTnLN8.jpg",
+      "description": "Opis Joji"
     }
   ],
   "genre": [
-    { "id": 1, "name": "Rock" },
-    { "id": 2, "name": "Pop" }
+    {
+      "id": 1,
+      "name": "Rock"
+    },
+    {
+      "id": 2,
+      "name": "Pop"
+    }
   ],
   "album": [
     {

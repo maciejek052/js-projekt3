@@ -1,1 +1,17 @@
-<p>wykonawca-dane works!</p>
+<div class="wykonawca-dane">
+  <div *ngIf="Wybrany_wykonawca != -1">
+    <app-wykonawca-edycja [wykonawca_do_edycji]="Wykonawcy[Wybrany_wykonawca]"
+                      (nowy_wykonawca)="dodanyZostalZmodyfikowanyWykonawca($event)">
+    </app-wykonawca-edycja>
+  </div>
+  <div>
+    <div *ngIf="Wybrany_wykonawca == -1">
+      <app-wykonawca-edycja (nowy_wykonawca)="dodanyZostalNowyWykonawca($event)">
+      </app-wykonawca-edycja>
+    </div>
+  </div>
+  <app-wykonawca-przeglad (id_wybranego_wykonawcy_do_usuniecia)="wyslijWybranegoWykonawceDoUsuniecia($event)"
+                      (id_wybranego_wykonawcy_do_edycji)="wyslijWybranegoWykonawceDoEdycji($event)"
+                      [tablica_wykonawcow_do_wyswietlenia]="Wykonawcy">
+  </app-wykonawca-przeglad>
+</div>

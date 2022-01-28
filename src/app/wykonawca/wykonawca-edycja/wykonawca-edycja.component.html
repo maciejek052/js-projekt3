@@ -1,1 +1,47 @@
-<p>wykonawca-edycja works!</p>
+<div>
+  <form [formGroup]="wykonawcaForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nazwa wykonawcy</mat-label>
+      <input id="nazwa_wykonawcy" matInput type="text" placeholder="Nazwa" formControlName="nazwaWykonawcy">
+      <mat-error
+        *ngIf="wykonawcaForm.get('nazwaWykonawcy')?.invalid && (wykonawcaForm.get('nazwaWykonawcy')?.dirty || wykonawcaForm.get('nazwaWykonawcy')?.touched)">
+        <mat-error *ngIf="wykonawcaForm.get('nazwaWykonawcy')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Kraj pochodzenia</mat-label>
+      <input id="kraj_wykonawcy" matInput type="text" placeholder="Kraj" formControlName="krajWykonawcy">
+      <mat-error
+        *ngIf="wykonawcaForm.get('krajWykonawcy')?.invalid && (wykonawcaForm.get('krajWykonawcy')?.dirty || wykonawcaForm.get('krajWykonawcy')?.touched)">
+        <mat-error *ngIf="wykonawcaForm.get('krajWykonawcy')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>URL do zdjęcia wykonawcy</mat-label>
+      <input id="zdjecie_wykonawcy" matInput type="text" placeholder="URL" formControlName="zdjecieWykonawcy">
+      <mat-error
+        *ngIf="wykonawcaForm.get('zdjecieWykonawcy')?.invalid && (wykonawcaForm.get('zdjecieWykonawcy')?.dirty || wykonawcaForm.get('zdjecieWykonawcy')?.touched)">
+        <mat-error *ngIf="wykonawcaForm.get('zdjecieWykonawcy')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Opis wykonawcy</mat-label>
+      <textarea id="opis_wykonawcy" matInput type="text" placeholder="Opis" formControlName="opisWykonawcy"></textarea>
+        <mat-error
+        *ngIf="wykonawcaForm.get('opisWykonawcy')?.invalid && (wykonawcaForm.get('opisWykonawcy')?.dirty || wykonawcaForm.get('opisWykonawcy')?.touched)">
+        <mat-error *ngIf="wykonawcaForm.get('opisWykonawcy')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+
+
+    <div>
+      <button mat-stroked-button color="primary" type="submit" [disabled]="!wykonawcaForm.valid">Zapisz</button>
+      <button mat-stroked-button color="secondary" type="button">Pobierz z last.fm</button>
+      <button mat-stroked-button color="warn" type="reset" (click)="wyczyscForm()">Wyczyść</button>
+    </div>
+  </form>
+</div>

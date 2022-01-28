@@ -1,1 +1,16 @@
-<p>wykonawca-przeglad works!</p>
+<div>
+  <table>
+    <tr>
+      <th>Nazwa wykonawcy</th>
+      <th>Kraj pochodzenia</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let wykonawca of tablica_wykonawcow_do_wyswietlenia">
+      <td>{{wykonawca.name}}</td>
+      <td>{{wykonawca.country}}</td>
+      <td><button (click)="zmodyfikuj_wybranego_wykonawce(wykonawca.id)">Zmodyfikuj</button></td>
+      <td><button (click)="usun_wybranego_wykonawce(wykonawca.id)">Usun</button></td>
+      <td><button routerLink="/wykonawcy/{{wykonawca.id}}">Podejrzyj</button></td>
+    </tr>
+  </table>
+  <div>
