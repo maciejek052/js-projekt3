@@ -1,0 +1,52 @@
+{
+  "artist": [
+    {
+      "id": 1,
+      "name": "Pink Floyd",
+      "country": "UK",
+      "photo": "https://i.imgur.com/3ZbNxSY.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Joji",
+      "country": "Japonia",
+      "photo": "https://i.imgur.com/DNTnLN8.jpg"
+    }
+  ],
+  "genre": [
+    { "id": 1, "name": "Rock" },
+    { "id": 2, "name": "Pop" }
+  ],
+  "album": [
+    {
+      "id": 1,
+      "name": "The Dark Side of The Moon",
+      "artistId": 1,
+      "genreId": 1,
+      "yearOfRelease": 1973,
+      "tracks": 9,
+      "description": "Opis albumu DSOTM",
+      "cover": "https://i.imgur.com/C4wTw2b.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Wish You Were Here",
+      "artistId": 1,
+      "genreId": 1,
+      "yearOfRelease": 1975,
+      "tracks": 5,
+      "description": "Opis albumu WYWH",
+      "cover": "https://i.imgur.com/VgsqEEj.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Nectar",
+      "artistId": 2,
+      "genreId": 2,
+      "yearOfRelease": 2020,
+      "tracks": 18,
+      "description": "Opis albumu Nectar",
+      "cover": "https://i.imgur.com/DwZuQVb.jpg"
+    }
+  ]
+}

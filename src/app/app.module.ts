@@ -21,6 +21,10 @@ import { GatunekPojedynczyComponent } from './gatunek/gatunek-pojedynczy/gatunek
 import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatListModule} from "@angular/material/list";
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -36,7 +40,9 @@ import {MatTableModule} from '@angular/material/table';
     WykonawcaPrzegladComponent,
     GatunekDaneComponent,
     GatunekPrzegladComponent,
-    GatunekPojedynczyComponent
+    GatunekPojedynczyComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,9 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatInputModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
