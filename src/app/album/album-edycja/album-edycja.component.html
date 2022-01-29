@@ -1,1 +1,77 @@
-<p>album-edycja works!</p>
+<div>
+  <form [formGroup]="albumForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nazwa albumu</mat-label>
+      <input id="nazwa_albumu" matInput type="text" placeholder="Nazwa" formControlName="nazwaAlbumu">
+      <mat-error
+        *ngIf="albumForm.get('nazwaAlbumu')?.invalid && (albumForm.get('nazwaAlbumu')?.dirty || albumForm.get('nazwaAlbumu')?.touched)">
+        <mat-error *ngIf="albumForm.get('nazwaAlbumu')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Wykonawca:</mat-label>
+      <mat-select formControlName="idArtysty">
+        <mat-option *ngFor="let wykonawca of wykonawcy" [value]="wykonawca.id">
+          {{wykonawca.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="albumForm.get('idArtysty')?.invalid && (albumForm.get('idArtysty')?.dirty || albumForm.get('idArtysty')?.touched)">
+        <mat-error *ngIf="albumForm.get('idArtysty')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Gatunek albumu</mat-label>
+      <input id="gatunek" matInput type="text" placeholder="Gatunek" formControlName="gatunek">
+      <mat-error
+        *ngIf="albumForm.get('gatunek')?.invalid && (albumForm.get('gatunek')?.dirty || albumForm.get('gatunek')?.touched)">
+        <mat-error *ngIf="albumForm.get('gatunek')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Rok wydania</mat-label>
+      <input id="rok_wydania" matInput type="number" placeholder="Rok" formControlName="rokWydania">
+      <mat-error
+        *ngIf="albumForm.get('rokWydania')?.invalid && (albumForm.get('rokWydania')?.dirty || albumForm.get('rokWydania')?.touched)">
+        <mat-error *ngIf="albumForm.get('rokWydania')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ilość piosenek</mat-label>
+      <input id="ilosc_piosenek" matInput type="number" placeholder="Ilość" formControlName="iloscPiosenek">
+      <mat-error
+        *ngIf="albumForm.get('iloscPiosenek')?.invalid && (albumForm.get('iloscPiosenek')?.dirty || albumForm.get('iloscPiosenek')?.touched)">
+        <mat-error *ngIf="albumForm.get('iloscPiosenek')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Opis albumu</mat-label>
+      <textarea id="opis_albumu" matInput type="text" placeholder="Opis" formControlName="opis"></textarea>
+      <mat-error
+        *ngIf="albumForm.get('opis')?.invalid && (albumForm.get('opis')?.dirty || albumForm.get('opis')?.touched)">
+        <mat-error *ngIf="albumForm.get('opis')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>URL do okładki</mat-label>
+      <input id="okladka" matInput type="text" placeholder="URL" formControlName="okladka">
+      <mat-error
+        *ngIf="albumForm.get('okladka')?.invalid && (albumForm.get('okladka')?.dirty || albumForm.get('okladka')?.touched)">
+        <mat-error *ngIf="albumForm.get('okladka')?.errors?.['required']">Pole wymagane</mat-error>
+      </mat-error>
+    </mat-form-field>
+
+
+    <div>
+      <button mat-stroked-button color="primary" type="submit" [disabled]="!albumForm.valid">Zapisz</button>
+      <button mat-stroked-button color="secondary" type="button" (click)="pobierzDaneZApi()">Pobierz z API</button>
+      <button mat-stroked-button color="warn" type="reset" (click)="wyczyscForm()">Wyczyść</button>
+    </div>
+  </form>
+</div>

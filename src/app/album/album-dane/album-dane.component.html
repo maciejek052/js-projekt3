@@ -1,1 +1,15 @@
-<p>album-dane works!</p>
+<div class="album-dane">
+  <div *ngIf="Wybrany_album != -1">
+    <app-album-edycja [album_do_edycji]="Albumy[Wybrany_album]" (nowy_album)="dodanyZostalZmodyfikowanyAlbum($event)">
+    </app-album-edycja>
+  </div>
+  <div>
+    <div *ngIf="Wybrany_album== -1">
+      <app-album-edycja (nowy_album)="dodanyZostalNowyAlbum($event)">
+      </app-album-edycja>
+    </div>
+  </div>
+  <app-album-przeglad (id_wybranego_albumu_do_usuniecia)="wyslijWybranyAlbumDoUsuniecia($event)"
+                          (id_wybranego_albumu_do_edycji)="wyslijWybranyAlbumDoEdycji($event)"
+                          [tablica_albumow_do_wyswietlenia]="Albumy">
+  </app-album-przeglad>

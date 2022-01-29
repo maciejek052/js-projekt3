@@ -8,18 +8,25 @@
       "description": "Opis Pink Floyd"
     },
     {
-      "id": 2,
-      "name": "Joji",
-      "country": "Niemcy",
-      "photo": "https://i.imgur.com/DNTnLN8.jpg",
-      "description": "kozak"
-    },
-    {
       "id": 3,
       "name": "Metallica",
       "country": "USA",
       "photo": "https://i.scdn.co/image/ab6761610000e5eb8101d13bdd630b0889acd2fd",
       "description": "Metallica is an American heavy metal band. The band was formed in 1981 in San Francisco by vocalist/guitarist James Hetfield and drummer Lars Ulrich and has been based in San Francisco for most of its career. The band's fast tempos, instrumentals, and aggressive musicianship made them one of the founding \"big four\" bands of thrash metal, alongside Megadeth, Anthrax, and Slayer. Metallica's current lineup comprises founding members, primary songwriters Hetfield, Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo. Read more on Last.fm"
+    },
+    {
+      "id": 4,
+      "name": "Lady Pank",
+      "country": "Polska",
+      "photo": "https://i.scdn.co/image/ab6761610000e5eb7060f24ff88671d0cd59e953",
+      "description": "Lady Pank is a popular Polish rock band. It was started in 1982 in Warsaw by Jan Borysewicz and Andrzej Mogielnicki. Its first famous song was \"Mała Lady Punk\" (Little Lady Punk). Lady Pank garnered some attention in the United States in 1986 when MTV placed the video for the band's single \"Minus Zero\" on heavy rotation.\n\nLady Pank is quite a curiosity on the Polish musical market. They got popular before they were actually... formed! The group, which was originally planning to call itself \"Żużel\" Read more on Last.fm"
+    },
+    {
+      "id": 5,
+      "name": "Joji",
+      "country": "Japonia",
+      "photo": "https://i.scdn.co/image/ab6761610000e5eb28f8b68ea703b22fc0c8be11",
+      "description": "George Miller, known by his stage name Joji, is a Japanese-Australian singer-songwriter, record producer and former YouTube personality.\n\nIn 2013, on the DizastaMusic YouTube channel, Miller created the video \"Do the Harlem Shake (Original),\" which originated from a clip of the video \"Filthy Compilation #6 – Smell My Fingers\",the video has been viewed 60 million times (as of February 2019). The original clip led to the creation of the Harlem Shake meme Read more on Last.fm"
     }
   ],
   "genres": [
@@ -37,7 +44,7 @@
       "id": 1,
       "name": "The Dark Side of The Moon",
       "artistId": 1,
-      "genreId": 1,
+      "genre": "Prog Rock",
       "yearOfRelease": 1973,
       "tracks": 9,
       "description": "Opis albumu DSOTM",
@@ -52,16 +59,6 @@
       "tracks": 5,
       "description": "Opis albumu WYWH",
       "cover": "https://i.imgur.com/VgsqEEj.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Nectar",
-      "artistId": 2,
-      "genreId": 2,
-      "yearOfRelease": 2020,
-      "tracks": 18,
-      "description": "Opis albumu Nectar",
-      "cover": "https://i.imgur.com/DwZuQVb.jpg"
     }
   ]
 }

@@ -26,6 +26,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -45,21 +46,22 @@ import {MatCardModule} from "@angular/material/card";
     NavbarComponent,
     HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatToolbarModule,
-    MatListModule,
-    MatCardModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatInputModule,
+        MatPaginatorModule,
+        MatTableModule,
+        MatToolbarModule,
+        MatListModule,
+        MatCardModule,
+        MatSelectModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

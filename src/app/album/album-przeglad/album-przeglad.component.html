@@ -1,1 +1,20 @@
-<p>album-przeglad works!</p>
+<div>
+  <table>
+    <tr>
+      <th>Nazwa</th>
+      <th>ID wykonawcy</th>
+      <th>gatunek</th>
+      <th>rok wydania</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let album of tablica_albumow_do_wyswietlenia">
+      <td>{{album.name}}</td>
+      <td>{{album.artistId}}</td>
+      <td>{{album.genre}}</td>
+      <td>{{album.yearOfRelease}}</td>
+      <td><button (click)="zmodyfikuj_wybrany_album(album.id)">Zmodyfikuj</button></td>
+      <td><button (click)="usun_wybrany_album(album.id)">Usun</button></td>
+      <td><button routerLink="/albumy/{{album.id}}">Podejrzyj</button></td>
+    </tr>
+  </table>
+  <div>
