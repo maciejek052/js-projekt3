@@ -1,6 +1,6 @@
 <h1>Szukaj artystów po kraju pochodzenia</h1>
-<form [formGroup]="szukajWykonawcow">
-  <mat-form-field apparance="fill">
+<form class="example-form" [formGroup]="szukajWykonawcow">
+  <mat-form-field class="example-full-width" apparance="fill">
     <mat-label>Szukaj wykonawców z danego kraju:</mat-label>
     <input matInput id="text" formControlName="kraj">
 
@@ -21,8 +21,8 @@
 <hr>
 <h1>Szukaj albumów po gatunkach</h1>
 
-<form [formGroup]="szukajAlbumow">
-  <mat-form-field apparance="fill">
+<form class="example-form" [formGroup]="szukajAlbumow">
+  <mat-form-field  class="example-full-width" apparance="fill">
     <mat-label>Szukaj wykonawców z danego kraju:</mat-label>
     <input matInput id="text2" formControlName="gatunek">
   </mat-form-field>
