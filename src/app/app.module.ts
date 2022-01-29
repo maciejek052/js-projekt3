@@ -27,6 +27,8 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatGridListModule} from "@angular/material/grid-list";
 import { WyszukiwanieComponent } from './wyszukiwanie/wyszukiwanie.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { AlbumPrzegladBezUsuwaniaComponent } from './album/album-przeglad-bez-usuwania/album-przeglad-bez-usuwania.component';
+import { WykonawcaPrzegladBezUsuwaniaComponent } from './wykonawca/wykonawca-przeglad-bez-usuwania/wykonawca-przeglad-bez-usuwania.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     NavbarComponent,
     HomeComponent,
     WyszukiwanieComponent,
+    AlbumPrzegladBezUsuwaniaComponent,
+    WykonawcaPrzegladBezUsuwaniaComponent,
   ],
   imports: [
     BrowserModule,

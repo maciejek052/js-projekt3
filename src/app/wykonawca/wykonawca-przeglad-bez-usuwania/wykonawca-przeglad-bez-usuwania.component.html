@@ -1,0 +1,21 @@
+<button mat-raised-button color="primary" (click)="sortujPoWykonawcy()">Sortuj alfabetycznie po nazwie</button>
+<button mat-raised-button color="primary" (click)="sortujPoKraju()">Sortuj alfabetycznie po kraju</button>
+
+
+
+<mat-grid-list cols="5" rowHeight="3:3.2">
+  <mat-grid-tile *ngFor="let wykonawca of tablica_wykonawcow_do_wyswietlenia">
+    <mat-card >
+      <mat-card-title>{{wykonawca.name}}</mat-card-title>
+      <mat-card-content>
+        Kraj pochodzenia: {{wykonawca.country}}<br/>
+        <img mat-card-image src={{wykonawca.photo}} alt="{{wykonawca.name}}">
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button routerLink="/wykonawcy/{{wykonawca.id}}">Podejrzyj</a>
+
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+

@@ -48,13 +48,6 @@
       "country": "UK",
       "photo": "https://i.scdn.co/image/ab6761610000e5ebe9348cc01ff5d55971b22433",
       "description": "The Beatles were an English  pop rock and beat band formed in Liverpool in 1960. With the line-up comprising of John Lennon, Paul McCartney, George Harrison and Ringo Starr, they are regarded as one of the most influential bands of all time. The group was integral to the development of 1960s counterculture and popular music's recognition as an art form. Rooted in skiffle, beat and 1950s rock and roll, their sound incorporated elements of classical Read more on Last.fm"
-    },
-    {
-      "id": 9,
-      "name": "Łona i Webber",
-      "country": "Polska",
-      "photo": "https://i.scdn.co/image/ab6761610000e5eb43cd36b742e66d63b1137ddd",
-      "description": " Read more on Last.fm"
     }
   ],
   "genres": [
@@ -73,10 +66,10 @@
       "name": "The Dark Side of The Moon",
       "artistId": 1,
       "genre": "Prog Rock",
-      "yearOfRelease": 1973,
-      "tracks": 9,
-      "description": "Opis albumu DSOTM",
-      "cover": "https://i.imgur.com/C4wTw2b.jpg"
+      "yearOfRelease": "1973",
+      "tracks": 10,
+      "description": "The Dark Side of the Moon is the eighth studio album by English rock band Pink Floyd, released on 1 March 1973 by Harvest Records. The album built on ideas explored in earlier recordings and live shows, but lacks the extended instrumental excursions that characterized their earlier work. Its themes explore conflict, greed, the passage of time, and mental illness, the latter partly inspired by the deteriorating mental state of founding member and principal contributor, Syd Barrett. Developed during live performances, an early version was premiered several months before recording began; the new material was recorded in two sessions in Read more on Last.fm.",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273ea7caaff71dea1051d49b2fe"
     },
     {
       "id": 2,
@@ -157,16 +150,6 @@
       "tracks": 13,
       "description": "Graduation is the third studio album by American rapper and producer Kanye West, released on September 11, 2007, through Def Jam Recordings and Roc-A-Fella Records. Recording sessions took place between 2005 and 2007 at several studios in New York and Los Angeles. It was primarily produced by West himself, with contributions from various other producers. The album also features guest appearances from recording artists such as Dwele, T-Pain, Lil Wayne, DJ Premier, and Chris Martin of Coldplay. The cover art and its interior artwork were designed by Japanese contemporary artist Takashi Murakami. Inspired by stadium tours, house-music and indie rock, Read more on Last.fm.",
       "cover": "https://i.scdn.co/image/ab67616d0000b2739bbd79106e510d13a9a5ec33"
-    },
-    {
-      "id": 10,
-      "name": "Nawiasem Mówiąc",
-      "artistId": 9,
-      "genre": "Hip-Hop",
-      "yearOfRelease": "2016",
-      "tracks": 14,
-      "description": "Opis albumu lalalalalalal",
-      "cover": "https://i.scdn.co/image/ab67616d0000b2730db5e582a4083ce93e7df6e1"
     }
   ]
 }

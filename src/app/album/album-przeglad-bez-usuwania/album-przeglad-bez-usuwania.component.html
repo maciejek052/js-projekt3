@@ -1,0 +1,18 @@
+<button mat-raised-button color="primary" (click)="sortujAlbumyAlfabetycznie()">Sortuj alfabetycznie</button>
+<button mat-raised-button color="primary" (click)="sortujAlbumyPoDacie()">Sortuj po dacie wydaniasda</button>
+
+<mat-grid-list cols="5" rowHeight="3:3.2">
+  <mat-grid-tile *ngFor="let album of tablica_albumow_do_wyswietlenia">
+    <mat-card >
+      <mat-card-title>{{album.name}}</mat-card-title>
+      <mat-card-subtitle>Gatunek: {{album.genre}}</mat-card-subtitle>
+      <mat-card-content>
+        Rok wydania: {{album.yearOfRelease}}<br/>
+        <img mat-card-image src={{album.cover}} alt="film.title">
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button routerLink="/albumy/{{album.id}}">Podejrzyj</a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
