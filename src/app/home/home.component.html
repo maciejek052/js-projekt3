@@ -1,1 +1,17 @@
-<p>home works!</p>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Album na dzisiaj:</mat-card-title>
+    <mat-card-subtitle>{{losowyAlbum.name}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{losowyAlbum.cover}}" alt="{{losowyAlbum.name}}">
+  <mat-card-content>
+    <p>
+      {{losowyAlbum.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/albumy/', losowyAlbum.id]">Przejdź na stronę albumu</button>
+  </mat-card-actions>
+</mat-card>
