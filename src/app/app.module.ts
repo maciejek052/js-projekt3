@@ -15,9 +15,6 @@ import { WykonawcaEdycjaComponent } from './wykonawca/wykonawca-edycja/wykonawca
 import { WykonawcaPojedynczyComponent } from './wykonawca/wykonawca-pojedynczy/wykonawca-pojedynczy.component';
 import { WykonawcaDaneComponent } from './wykonawca/wykonawca-dane/wykonawca-dane.component';
 import { WykonawcaPrzegladComponent } from './wykonawca/wykonawca-przeglad/wykonawca-przeglad.component';
-import { GatunekDaneComponent } from './gatunek/gatunek-dane/gatunek-dane.component';
-import { GatunekPrzegladComponent } from './gatunek/gatunek-przeglad/gatunek-przeglad.component';
-import { GatunekPojedynczyComponent } from './gatunek/gatunek-pojedynczy/gatunek-pojedynczy.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
@@ -28,6 +25,8 @@ import { HomeComponent } from './home/home.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatSelectModule} from "@angular/material/select";
 import {MatGridListModule} from "@angular/material/grid-list";
+import { WyszukiwanieComponent } from './wyszukiwanie/wyszukiwanie.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 
 @NgModule({
@@ -41,11 +40,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
     WykonawcaPojedynczyComponent,
     WykonawcaDaneComponent,
     WykonawcaPrzegladComponent,
-    GatunekDaneComponent,
-    GatunekPrzegladComponent,
-    GatunekPojedynczyComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    WyszukiwanieComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +59,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatListModule,
     MatCardModule,
     MatSelectModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

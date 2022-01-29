@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GatunekPrzegladComponent } from './gatunek-przeglad.component';
+import { WyszukiwanieComponent } from './wyszukiwanie.component';
 
-describe('GatunekPrzegladComponent', () => {
-  let component: GatunekPrzegladComponent;
-  let fixture: ComponentFixture<GatunekPrzegladComponent>;
+describe('WyszukiwanieComponent', () => {
+  let component: WyszukiwanieComponent;
+  let fixture: ComponentFixture<WyszukiwanieComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GatunekPrzegladComponent ]
+      declarations: [ WyszukiwanieComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GatunekPrzegladComponent);
+    fixture = TestBed.createComponent(WyszukiwanieComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

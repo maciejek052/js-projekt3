@@ -24,7 +24,7 @@ export class AlbumService {
   }
 
   pobierzAlbumyGatunku(gatunek: string): Observable<Album[]> {
-    return this.http.get<Album[]>(this.URL+"?genre="+gatunek).pipe(catchError(this.handleError<Album[]>('pobierzAlbumyGatunku', [])));
+    return this.http.get<Album[]>(this.URL+"?genre_like="+gatunek).pipe(catchError(this.handleError<Album[]>('pobierzAlbumyGatunku', [])));
   }
 
   pobierzAlbumODanymId(id: number): Observable<Album>{

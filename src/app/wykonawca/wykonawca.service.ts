@@ -18,6 +18,11 @@ export class WykonawcaService {
   pobierzWykonawcow(): Observable<Wykonawca[]> {
     return this.http.get<Wykonawca[]>(this.URL).pipe(catchError(this.handleError<Wykonawca[]>('pobierzWykonawcow', [])));
   }
+
+  pobierzWykonawcowZKraju(kraj: string): Observable<Wykonawca[]> {
+  return this.http.get<Wykonawca[]>(this.URL+"?country_like="+kraj).pipe(catchError(this.handleError<Wykonawca[]>('pobierzWykonawcowZKraju', [])));
+}
+
   pobierzWykonawceODanymId(id: number): Observable<Wykonawca>{
     return this.http.get<Wykonawca>(this.URL+"/"+id).pipe(catchError(this.handleError<Wykonawca>('pobierzWykonawceODanymId')));
   }

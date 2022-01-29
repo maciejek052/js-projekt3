@@ -1,0 +1,41 @@
+<h1>Szukaj artystów po kraju pochodzenia</h1>
+<form [formGroup]="szukajWykonawcow">
+  <mat-form-field apparance="fill">
+    <mat-label>Szukaj wykonawców z danego kraju:</mat-label>
+    <input matInput id="text" formControlName="kraj">
+
+  </mat-form-field>
+</form>
+
+<div *ngIf="pustoArtysci; else wyswietlTabele">
+  <h2>
+    <mat-error>Brak danych do wyświetlenia</mat-error>
+  </h2>
+</div>
+<ng-template #wyswietlTabele>
+<app-wykonawca-przeglad
+  [tablica_wykonawcow_do_wyswietlenia]="Wykonawcy">
+</app-wykonawca-przeglad>
+</ng-template>
+
+<hr>
+<h1>Szukaj albumów po gatunkach</h1>
+
+<form [formGroup]="szukajAlbumow">
+  <mat-form-field apparance="fill">
+    <mat-label>Szukaj wykonawców z danego kraju:</mat-label>
+    <input matInput id="text2" formControlName="gatunek">
+  </mat-form-field>
+</form>
+
+
+<div *ngIf="pustoAlbumy; else wyswietlTabele2">
+  <h2>
+    <mat-error>Brak danych do wyświetlenia</mat-error>
+  </h2>
+</div>
+<ng-template #wyswietlTabele2>
+<app-album-przeglad
+  [tablica_albumow_do_wyswietlenia]="Albumy">
+</app-album-przeglad>
+</ng-template>
