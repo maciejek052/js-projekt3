@@ -1,5 +1,5 @@
 {
-  "artist": [
+  "artists": [
     {
       "id": 1,
       "name": "Pink Floyd",
@@ -22,7 +22,7 @@
       "description": "Metallica is an American heavy metal band. The band was formed in 1981 in San Francisco by vocalist/guitarist James Hetfield and drummer Lars Ulrich and has been based in San Francisco for most of its career. The band's fast tempos, instrumentals, and aggressive musicianship made them one of the founding \"big four\" bands of thrash metal, alongside Megadeth, Anthrax, and Slayer. Metallica's current lineup comprises founding members, primary songwriters Hetfield, Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo. Read more on Last.fm"
     }
   ],
-  "genre": [
+  "genres": [
     {
       "id": 1,
       "name": "Rock"
@@ -32,7 +32,7 @@
       "name": "Pop"
     }
   ],
-  "album": [
+  "albums": [
     {
       "id": 1,
       "name": "The Dark Side of The Moon",

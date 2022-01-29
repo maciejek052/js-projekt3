@@ -8,7 +8,7 @@ import {catchError, Observable, of} from "rxjs";
 })
 export class WykonawcaService {
 
-  private URL = 'http://localhost:3000/artist';
+  private URL = 'http://localhost:3000/artists';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
