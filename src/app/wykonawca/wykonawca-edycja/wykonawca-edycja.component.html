@@ -40,7 +40,7 @@
 
     <div>
       <button mat-stroked-button color="primary" type="submit" [disabled]="!wykonawcaForm.valid">Zapisz</button>
-      <button mat-stroked-button color="secondary" type="button">Pobierz z last.fm</button>
+      <button mat-stroked-button color="secondary" type="button" (click)="pobierzDaneZApi()">Pobierz z API</button>
       <button mat-stroked-button color="warn" type="reset" (click)="wyczyscForm()">Wyczyść</button>
     </div>
   </form>

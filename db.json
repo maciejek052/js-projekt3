@@ -10,9 +10,16 @@
     {
       "id": 2,
       "name": "Joji",
-      "country": "Japonia",
+      "country": "Niemcy",
       "photo": "https://i.imgur.com/DNTnLN8.jpg",
-      "description": "Opis Joji"
+      "description": "kozak"
+    },
+    {
+      "id": 3,
+      "name": "Metallica",
+      "country": "USA",
+      "photo": "https://i.scdn.co/image/ab6761610000e5eb8101d13bdd630b0889acd2fd",
+      "description": "Metallica is an American heavy metal band. The band was formed in 1981 in San Francisco by vocalist/guitarist James Hetfield and drummer Lars Ulrich and has been based in San Francisco for most of its career. The band's fast tempos, instrumentals, and aggressive musicianship made them one of the founding \"big four\" bands of thrash metal, alongside Megadeth, Anthrax, and Slayer. Metallica's current lineup comprises founding members, primary songwriters Hetfield, Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo. Read more on Last.fm"
     }
   ],
   "genre": [

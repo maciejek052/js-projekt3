@@ -25,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatListModule} from "@angular/material/list";
 import { HomeComponent } from './home/home.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { HomeComponent } from './home/home.component';
     MatPaginatorModule,
     MatTableModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
