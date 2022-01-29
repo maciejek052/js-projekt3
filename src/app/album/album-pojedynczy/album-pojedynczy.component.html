@@ -1,1 +1,19 @@
-<p>album-pojedynczy works!</p>
+
+
+
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>{{album.name}}</mat-card-title>
+    <mat-card-subtitle><a routerLink="/wykonawcy/{{wykonawca.id}}">{{wykonawca.name}}</a></mat-card-subtitle>
+    <mat-card-subtitle>Gatunek: {{album.genre}}</mat-card-subtitle>
+    <mat-card-subtitle>Rok wydania: {{album.yearOfRelease}}</mat-card-subtitle>
+    <mat-card-subtitle>Ilość piosenek: {{album.tracks}}</mat-card-subtitle>
+    <img mat-card-xl-image src="{{album.cover}}" >
+  </mat-card-title-group>
+  <mat-card-content>
+    {{album.description}}
+  </mat-card-content>
+</mat-card>
+
+
+<iframe [src]="kod_embed" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

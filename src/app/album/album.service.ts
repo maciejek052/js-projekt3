@@ -18,6 +18,15 @@ export class AlbumService {
   pobierzAlbumy(): Observable<Album[]> {
     return this.http.get<Album[]>(this.URL).pipe(catchError(this.handleError<Album[]>('pobierzAlbumy', [])));
   }
+
+  pobierzAlbumyWykonawcy(id_wykonawcy: number): Observable<Album[]> {
+    return this.http.get<Album[]>(this.URL+"?artistId="+id_wykonawcy).pipe(catchError(this.handleError<Album[]>('pobierzAlbumyWykonawcy', [])));
+  }
+
+  pobierzAlbumyGatunku(gatunek: string): Observable<Album[]> {
+    return this.http.get<Album[]>(this.URL+"?genre="+gatunek).pipe(catchError(this.handleError<Album[]>('pobierzAlbumyGatunku', [])));
+  }
+
   pobierzAlbumODanymId(id: number): Observable<Album>{
     return this.http.get<Album>(this.URL+"/"+id).pipe(catchError(this.handleError<Album>('pobierzAlbumODanymId')));
   }
@@ -30,6 +39,7 @@ export class AlbumService {
   usunAlbum(id: string): Observable<unknown> {
     return this.http.delete(this.URL+"/"+id, this.httpOptions).pipe(catchError(this.handleError('usunAlbum')));
   }
+
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

@@ -24,4 +24,12 @@ export class AlbumPrzegladComponent implements OnInit {
     this.id_wybranego_albumu_do_usuniecia.emit(id);
   }
 
+  sortujAlbumyAlfabetycznie() {
+
+  }
+
+  sortujAlbumyPoDacie() {
+    
+  }
+
 }

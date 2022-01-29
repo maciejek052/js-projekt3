@@ -39,7 +39,14 @@ export class SpotifyService {
     })
   }
 
-  
+  szukajAlbum (query: any) {
+    return this.http.get(this.adres + "search?type=album&q=" + query, {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.token })
+    })
+  }
+
+
 }
 
 

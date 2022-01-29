@@ -33,7 +33,7 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Rok wydania</mat-label>
-      <input id="rok_wydania" matInput type="number" placeholder="Rok" formControlName="rokWydania">
+      <input id="rok_wydania" matInput type="number" placeholder="Rok" formControlName="rokWydania" >
       <mat-error
         *ngIf="albumForm.get('rokWydania')?.invalid && (albumForm.get('rokWydania')?.dirty || albumForm.get('rokWydania')?.touched)">
         <mat-error *ngIf="albumForm.get('rokWydania')?.errors?.['required']">Pole wymagane</mat-error>

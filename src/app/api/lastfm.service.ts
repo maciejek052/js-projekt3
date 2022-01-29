@@ -18,6 +18,10 @@ export class LastfmService {
     return this.http.get(this.adres + "&method=artist.getinfo&artist=" + nazwa);
   }
 
+  informacjeAlbum (wykonawca: any, nazwa: any) {
+    return this.http.get(this.adres + "&method=album.getinfo&artist=" + wykonawca + "&album=" + nazwa);
+  }
+
 
 }
 

@@ -1,16 +1,19 @@
-<div>
-  <table>
-    <tr>
-      <th>Nazwa wykonawcy</th>
-      <th>Kraj pochodzenia</th>
-      <th></th>
-    </tr>
-    <tr *ngFor="let wykonawca of tablica_wykonawcow_do_wyswietlenia">
-      <td>{{wykonawca.name}}</td>
-      <td>{{wykonawca.country}}</td>
-      <td><button (click)="zmodyfikuj_wybranego_wykonawce(wykonawca.id)">Zmodyfikuj</button></td>
-      <td><button (click)="usun_wybranego_wykonawce(wykonawca.id)">Usun</button></td>
-      <td><button routerLink="/wykonawcy/{{wykonawca.id}}">Podejrzyj</button></td>
-    </tr>
-  </table>
-  <div>
+
+<mat-grid-list cols="5" rowHeight="3:3.2">
+  <mat-grid-tile *ngFor="let wykonawca of tablica_wykonawcow_do_wyswietlenia">
+    <mat-card >
+      <mat-card-title>{{wykonawca.name}}</mat-card-title>
+      <mat-card-content>
+        Kraj pochodzenia: {{wykonawca.country}}<br/>
+        <img mat-card-image src={{wykonawca.photo}} alt="{{wykonawca.name}}">
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="zmodyfikuj_wybranego_wykonawce(wykonawca.id)">Zmodyfikuj</button>
+        <button mat-raised-button color="warn" (click)="usun_wybranego_wykonawce(wykonawca.id)">Usun</button>
+        <a mat-raised-button routerLink="/wykonawcy/{{wykonawca.id}}">Podejrzyj</a>
+
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+

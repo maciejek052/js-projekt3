@@ -8,3 +8,8 @@
     {{wykonawca.description}}
   </mat-card-content>
 </mat-card>
+
+<h2>Albumy wykonawcy {{wykonawca.name}}</h2>
+<app-album-przeglad
+                    [tablica_albumow_do_wyswietlenia]="Albumy">
+</app-album-przeglad>

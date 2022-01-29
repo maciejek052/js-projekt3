@@ -1,20 +1,20 @@
-<div>
-  <table>
-    <tr>
-      <th>Nazwa</th>
-      <th>ID wykonawcy</th>
-      <th>gatunek</th>
-      <th>rok wydania</th>
-      <th></th>
-    </tr>
-    <tr *ngFor="let album of tablica_albumow_do_wyswietlenia">
-      <td>{{album.name}}</td>
-      <td>{{album.artistId}}</td>
-      <td>{{album.genre}}</td>
-      <td>{{album.yearOfRelease}}</td>
-      <td><button (click)="zmodyfikuj_wybrany_album(album.id)">Zmodyfikuj</button></td>
-      <td><button (click)="usun_wybrany_album(album.id)">Usun</button></td>
-      <td><button routerLink="/albumy/{{album.id}}">Podejrzyj</button></td>
-    </tr>
-  </table>
-  <div>
+
+    <mat-grid-list cols="5" rowHeight="3:3.2">
+      <mat-grid-tile *ngFor="let album of tablica_albumow_do_wyswietlenia">
+        <mat-card >
+          <mat-card-title>{{album.name}}</mat-card-title>
+          <mat-card-subtitle>Gatunek: {{album.genre}}</mat-card-subtitle>
+          <mat-card-content>
+            Rok wydania: {{album.yearOfRelease}}<br/>
+            <img mat-card-image src={{album.cover}} alt="film.title">
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="zmodyfikuj_wybrany_album(album.id)">Zmodyfikuj</button>
+            <button mat-raised-button color="warn" (click)="usun_wybrany_album(album.id)">Usun</button>
+            <a mat-raised-button routerLink="/albumy/{{album.id}}">Podejrzyj</a>
+
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+

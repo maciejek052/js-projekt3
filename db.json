@@ -23,10 +23,10 @@
     },
     {
       "id": 5,
-      "name": "Joji",
-      "country": "Japonia",
-      "photo": "https://i.scdn.co/image/ab6761610000e5eb28f8b68ea703b22fc0c8be11",
-      "description": "George Miller, known by his stage name Joji, is a Japanese-Australian singer-songwriter, record producer and former YouTube personality.\n\nIn 2013, on the DizastaMusic YouTube channel, Miller created the video \"Do the Harlem Shake (Original),\" which originated from a clip of the video \"Filthy Compilation #6 – Smell My Fingers\",the video has been viewed 60 million times (as of February 2019). The original clip led to the creation of the Harlem Shake meme Read more on Last.fm"
+      "name": "Paktofonika",
+      "country": "Polska",
+      "photo": "https://i.scdn.co/image/1cc93197c2ce026294ad15ee5df2a0fefb5eb488",
+      "description": "Paktofonika was a Polish hip-hop group from Katowice and Mikołów that formed in 1998. They debuted with the album Kinematografia in 2000. \n\nPaktofonika was founded shortly after Magik left Kaliber 44 during the recording of their second album, W 63 minuty dookoła świata. Rahim left his group 3xKlan at around the same time, and formed Paktofonika with Magik and Fokus in 1998.\n\nIn the spring of 2000 the group were signed with Gigant Records. That same year, on December 18, they released their debut album Kinematografia. Read more on Last.fm"
     }
   ],
   "genres": [
@@ -54,11 +54,51 @@
       "id": 2,
       "name": "Wish You Were Here",
       "artistId": 1,
-      "genreId": 1,
-      "yearOfRelease": 1975,
+      "genre": "Prog Rock",
+      "yearOfRelease": "1975",
       "tracks": 5,
-      "description": "Opis albumu WYWH",
-      "cover": "https://i.imgur.com/VgsqEEj.jpg"
+      "description": "The band entered Abbey Road Studios during the first week of 1975 to begin recording on their follow-up to Dark Side of the Moon. In the previous year, they introduced three new pieces to European audiences during the first sets of each show. Two of them, \"Raving and Drooling\" & \"You Gotta Be Crazy\", were ultimately not recorded for Wish You Were Here, but re-shaped and recorded in 1976 for the Animals album as respectively \"Sheep\" and \"Dogs\". The third would take shape as the album's centerpiece, \"Shine on You Crazy Diamond\". During tour rehearsals for the previous year's French Read more on Last.fm.",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2731a84d71391df7469c5ab8539"
+    },
+    {
+      "id": 3,
+      "name": "Lady Pank",
+      "artistId": 4,
+      "genre": "Rock",
+      "yearOfRelease": 1983,
+      "tracks": 10,
+      "description": "Debiutancki album Lady Pank",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2738150be7d67b7b1d8330fa504"
+    },
+    {
+      "id": 4,
+      "name": "Animals",
+      "artistId": 1,
+      "genre": "Prog Rock",
+      "yearOfRelease": "1977",
+      "tracks": 5,
+      "description": "Animals is an album by English progressive rock band Pink Floyd, released on 23 January 1977 in the UK and on 2 February 1977 in the U.S. Animals is a concept album, based on the flaws of capitalism. Various castes in society are represented as different types of animals (Dogs as the businessmen, sheep as the powerless pawns, and pigs as the ruthless leaders). Although this album mainly attacks capitalism, several components are similar to George Orwell's novel \"Animal Farm\": In the book, various animals (mainly pigs, sheep, dogs, etc.) represent different roles assumed by individuals in a communist society. Read more on Last.fm.",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273810168d54f85d48f07389237"
+    },
+    {
+      "id": 5,
+      "name": "...And Justice for All",
+      "artistId": 3,
+      "genre": "Thrash Metal",
+      "yearOfRelease": "1988",
+      "tracks": 147,
+      "description": "...And Justice for All is the fourth studio album by American heavy metal band Metallica. Elektra Records released the album on August 25, 1988. This is the first Metallica studio album to feature bassist Jason Newsted, since it is the first after the tragic death of the group's former bassist Cliff Burton. The album's dark subject material, featuring references to nuclear apocalypse, injustice in the law system, limited freedom, war, insanity and hate, is accompanied by the most complex song structures to this date in Metallica's discography. The album is also noted for its near lack of bass guitar and Read more on Last.fm.",
+      "cover": "https://i.scdn.co/image/ab67616d0000b273be54746b374358970b5e617a"
+    },
+    {
+      "id": 6,
+      "name": "Kinematografia",
+      "artistId": 5,
+      "genre": "Hip-Hop",
+      "yearOfRelease": "2020",
+      "tracks": 16,
+      "description": "Pierwszy album Paktofoniki",
+      "cover": "https://i.scdn.co/image/ab67616d0000b2731735e8581e68c112e7100235"
     }
   ]
 }

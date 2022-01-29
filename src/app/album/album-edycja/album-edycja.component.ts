@@ -3,6 +3,8 @@ import {Album} from "../album.model";
 import {Wykonawca} from "../../wykonawca/wykonawca.model";
 import {WykonawcaService} from "../../wykonawca/wykonawca.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {SpotifyService} from "../../api/spotify.service";
+import {LastfmService} from "../../api/lastfm.service";
 
 @Component({
   selector: 'app-album-edycja',
@@ -30,7 +32,8 @@ export class AlbumEdycjaComponent implements OnInit {
 
 
 
-  constructor(private wykonawcyService: WykonawcaService) {
+  constructor(private wykonawcyService: WykonawcaService, private Spotify: SpotifyService,
+              private LastFm: LastfmService) {
     this.wykonawcyService.pobierzWykonawcow().subscribe(wykonawcy => this.wykonawcy = wykonawcy);
   }
 
@@ -86,9 +89,47 @@ export class AlbumEdycjaComponent implements OnInit {
   }
 
   pobierzDaneZApi() {
+    const id_wykonawcy = this.albumForm.get('idArtysty')?.value;
+    // @ts-ignore
+    let wykonawca = this.wykonawcy.find(x => x.id == id_wykonawcy).name;
+    let nazwa_albumu = this.albumForm.get('nazwaAlbumu')?.value;
+    let query = nazwa_albumu + " " + wykonawca;
+
+    this.Spotify.szukajAlbum(query).subscribe(
+      data => {
+        var okladka = (<any>data).albums.items[0].images[0].url;
+        var ile_utworow = (<any>data).albums.items[0].total_tracks;
+        var rok_wydania = (<any>data).albums.items[0].release_date;
+
+        this.albumForm.get('okladka')?.setValue(okladka);
+        this.albumForm.get('iloscPiosenek')?.setValue(ile_utworow);
+        this.albumForm.get('rokWydania')?.setValue(rok_wydania.substring(0,4));
+      },
+      error => {
+        alert("Błąd przy pobieraniu danych z API Spotify, zobacz konsolę");
+        console.log(error);
+      }
+    );
+
+    this.LastFm.informacjeAlbum(wykonawca, nazwa_albumu).subscribe(
+      data => {
+        var opis = (<any>data).album.wiki.summary;
+        this.albumForm.get('opis')?.setValue(striplinks(opis));
+      },
+      error => {
+        alert("Błąd przy pobieraniu danych z API LastFM, zobacz konsolę");
+        console.log(error);
+      }
+    );
 
   }
 
-
-
 }
+function striplinks(text: string) {
+  var re = /<a\s.*?href=[\"\'](.*?)[\"\']*?>(.*?)<\/a>/g;
+  var str = text;
+  var subst = '$2';
+  var result = str.replace(re, subst);
+  return result;
+}
+
